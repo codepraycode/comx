@@ -1,0 +1,50 @@
+@use "../mixins" as mxn;
+@use "../functions" as fn;
+@use "../variables" as varr;
+
+.font-input-label-text {
+    @include mxn.apply-roboto();
+    font-size: fn.px-to-rem(14px);
+    line-height: fn.px-to-rem(16.41px);
+    letter-spacing: 0rem;
+
+    color: varr.$dark-clr-2;
+
+    display: inline-block;
+    margin-bottom: .5rem;
+}
+
+.form-input-text {
+    padding: .75rem 1rem;
+    border-radius: .3rem;
+
+    &::placeholder {
+        font-family: inherit;
+        font-weight: inherit;
+
+        font-size: inherit;
+        line-height: inherit;
+        letter-spacing: inherit;
+
+
+        color: varr.$gray-clr-1;
+    }
+}
+
+.form-inline-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.form-wrapper {
+    width: 90%;
+    margin-inline: auto;
+}
+
+.form-cta-wrapper {
+    text-align: center;
+    .btn {
+        width: 100%;
+    }
+}

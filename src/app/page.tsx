@@ -14,8 +14,10 @@ export default function Home() {
 
             <section className="auth-wrapper">
                 <Card center className="auth-card-display">
-                    <h1>Sign in to ComX</h1>
-                    <p className="mt-1">Welcome to ComX</p>
+                    <div className="text-center">
+                        <h1>Sign in to ComX</h1>
+                        <p className="mt-1">Welcome to ComX</p>
+                    </div>
 
                     <br />
                     <br />
@@ -25,7 +27,7 @@ export default function Home() {
                         variation="green"
                         title="Sign in"
                         link="/sign-in"
-                        noImplemented
+                        // noImplemented
                     >
                         Sign in
                     </Button>

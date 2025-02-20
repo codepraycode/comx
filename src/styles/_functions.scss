@@ -4,3 +4,7 @@
     // @debug color.scale($color, $lightness: -$percent);
     @return color.scale($color, $lightness: -$percent);
 }
+
+@function px-to-rem($px-value, $base: 16px) {
+    @return calc($px-value / $base) * 1rem;
+}

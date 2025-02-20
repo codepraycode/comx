@@ -9,6 +9,9 @@
     align-items: center;
     justify-content: center;
 
+    // display: inline-block;
+    // text-align: center;
+
     
     @include mxn.px-to-rem(padding-block, 12px);
     @include mxn.px-to-rem(padding-inline, 24px);
@@ -36,6 +39,15 @@
         opacity: 0.6;
         pointer-events: none;
     }
+
+    &--outlined {
+        background-color: transparent !important;
+
+        &:hover,
+        &:focus {
+            outline: .1rem solid currentColor;
+        }
+    }
 }
 
 
@@ -46,6 +58,9 @@
         @include mxn.px-to-rem(width, 457px);
         @include mxn.px-to-rem(min-height, 46px);
         max-width: 95%;
+    }
+    &-fit {
+        width: fit-content;
     }
 }
 
@@ -73,6 +88,23 @@
 
         &:active {
             background-color: fn.darken(varr.$dark-clr-3, 15%);
+        }
+    }
+
+    &-red {
+        // background-color: varr.$dark-clr-3;
+        // color: varr.$white-clr-1;
+
+        // &:hover {
+        //     background-color: fn.darken(varr.$dark-clr-3, 10%);
+        // }
+
+        // &:active {
+        //     background-color: fn.darken(varr.$dark-clr-3, 15%);
+        // }
+
+        &.btn--outlined {
+            color: varr.$red-clr-2;
         }
     }
 }
