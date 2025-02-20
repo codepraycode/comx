@@ -50,8 +50,8 @@ export default function SignInPage() {
                             <CheckBox name="signed-in">Stay Signed in</CheckBox>
 
                             <Button
-                                link="/forgot-password"
-                                noImplemented
+                                link="/sign-in/password-reset"
+                                // noImplemented
                                 variation="red"
                                 size="fit"
                                 outline

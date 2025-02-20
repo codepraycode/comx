@@ -1,4 +1,5 @@
 @use "../variables" as varr;
+@use "../functions" as fn;
 
 .auth-wrapper {
     // background-color: red;
@@ -17,4 +18,10 @@
     // text-align: center;
     padding-block: 2.5rem;
     // @include mxn.px-to-rem(min-height, 228px);
+
+    &--ext {
+        // height: max-content !important;
+        // background-color: green;
+        // min-height: fn.px-to-rem(570px);
+    }
 }

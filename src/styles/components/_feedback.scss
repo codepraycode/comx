@@ -1,0 +1,85 @@
+@use "../variables" as varr;
+@use "../functions" as fn;
+@use "../mixins" as mxn;
+
+.feedback-wrapper {
+    display: block;
+    // align-items: center;
+    // justify-content: space-between;
+    
+
+    
+    // height: 61;
+    padding: 1.5rem 1rem;
+    // top: 338px;
+    // left: 61px;
+    border-radius: fn.px-to-rem(10px);
+    // border-width: 1px;
+
+    position: relative;
+    color: currentColor;
+
+
+}
+
+.feedback-cta {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+
+    width: 2rem;
+    height: 2rem;
+    
+    padding: 0;
+    margin: 0;
+
+    letter-spacing: 0rem;
+    line-height: 0rem;
+
+    user-select: none;
+
+    
+
+    border: 0;
+    border-radius: 50%;
+
+
+    background-image: url("/images/icons/cross.svg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: transparent;
+
+    outline: none;
+
+    cursor: pointer;
+    color: currentColor;
+
+    // &:focus {
+    //     outline-color: varr.$gray-clr-1;
+    // }
+
+    // color: red;
+}
+
+.feedback-content {
+    @include mxn.apply-roboto();
+    font-size: fn.px-to-rem(16px);
+    line-height: fn.px-to-rem(18.75px);
+    letter-spacing: 0rem;
+
+    flex: 1;
+}
+
+.feedback-error {
+    background-color: varr.$red-clr-1;
+    border: 1px solid varr.$red-clr-3;
+
+    color: varr.$red-clr-3;
+
+    .feedback-content {
+        // color: varr.$red-clr-3;
+
+        // background-color: green;
+        max-width: 90%;
+    }
+}

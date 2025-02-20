@@ -1,5 +1,31 @@
+@use "../mixins" as mxn;
+@use "../functions" as fn;
+@use "../variables" as varr;
 
 
 .text-center {
     text-align: center;
+}
+
+// Text transform
+.text {
+    &-uppercase {
+        text-transform: uppercase;
+    }
+    &-capitalize {
+        text-transform: capitalize;
+    }
+}
+
+.text-info {
+    // font-family: Roboto;
+    // font-weight: 400;
+
+    @include mxn.apply-roboto();
+    font-size: fn.px-to-rem(12px);
+    line-height:fn.px-to-rem(21px);
+    letter-spacing: 0rem;
+
+    color: varr.$gray-clr-1;
+    opacity: .8;
 }

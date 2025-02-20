@@ -40,6 +40,28 @@
 .form-wrapper {
     width: 90%;
     margin-inline: auto;
+
+    &.password-reset {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        max-height: 100%;
+        height: fn.px-to-rem(400px);
+
+        padding-top: 3rem;
+        
+        // background-color: red;
+
+        .form-cta-wrapper {
+            // margin-top: auto;
+
+            display: flex;
+
+            .btn {
+                width: auto;
+            }
+        }
+    }
 }
 
 .form-cta-wrapper {

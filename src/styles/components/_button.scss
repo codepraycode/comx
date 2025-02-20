@@ -89,6 +89,10 @@
         &:active {
             background-color: fn.darken(varr.$dark-clr-3, 15%);
         }
+
+        &.btn--outlined {
+            color: varr.$dark-clr-3;
+        }
     }
 
     &-red {
