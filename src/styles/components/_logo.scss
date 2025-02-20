@@ -1,0 +1,14 @@
+@use "../variables" as varr;
+
+.logo {
+    // background-color: red;
+    display: block;
+    height: varr.$logo-height;
+
+    overflow: hidden;
+    
+    &--center {
+        width: max-content;
+        margin-inline: auto;
+    }
+}

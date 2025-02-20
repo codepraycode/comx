@@ -1,0 +1,11 @@
+@use "../mixins" as mxn;
+
+// Margins
+.mt {
+    &-auto {
+        margin-top: auto;
+    }
+    &-1 {
+        margin-top: .5rem;
+    }
+}

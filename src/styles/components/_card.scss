@@ -1,0 +1,23 @@
+@use "../mixins" as mxn;
+@use "../variables" as varr;
+
+.card-wrapper {
+    @include mxn.px-to-rem(width, 555px);
+    max-width: 95%;
+    background-color: varr.$white-clr-1;
+    
+    padding: 1rem;
+    @include mxn.px-to-rem(border-radius, 4px);
+
+
+    &--center {
+        margin-inline: auto;
+    }
+}
+
+
+.auth-card-display {
+    text-align: center;
+    padding-block: 2.5rem;
+    // @include mxn.px-to-rem(min-height, 228px);
+}

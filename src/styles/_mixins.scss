@@ -1,0 +1,11 @@
+
+/* Apply roboto font family, accepts: 400, 500 */
+@mixin apply-roboto($weight: 400) {
+    font-family: "Roboto", sans-serif;
+    font-weight: $weight;
+}
+
+// Pixel to Rem
+@mixin px-to-rem($property, $px-value, $base: 16px) {
+    #{$property}: calc($px-value / $base) * 1rem;
+}

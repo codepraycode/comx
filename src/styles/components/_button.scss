@@ -1,0 +1,78 @@
+@use "../mixins" as mxn;
+@use "../variables" as varr;
+@use "../functions" as fn;
+
+
+// Base style for button
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    
+    @include mxn.px-to-rem(padding-block, 12px);
+    @include mxn.px-to-rem(padding-inline, 24px);
+
+    font-size: 1rem;
+    @include mxn.apply-roboto(700);
+
+    border: none;
+    @include mxn.px-to-rem(padding-inline, 8px);
+
+    letter-spacing: 0px;
+    @include mxn.px-to-rem(font-size, 14px);
+    @include mxn.px-to-rem(line-height, 16.41px);
+    
+    cursor: pointer;
+    @include mxn.px-to-rem(border-radius, 2px);
+    
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+    outline: none;
+    white-space: nowrap;
+
+    &--disabled,
+    &:disabled {
+        opacity: 0.6;
+        pointer-events: none;
+    }
+}
+
+
+// Button Variations
+
+.btn-sz {
+    &-lg {
+        @include mxn.px-to-rem(width, 457px);
+        @include mxn.px-to-rem(min-height, 46px);
+        max-width: 95%;
+    }
+}
+
+.btn-var {
+    &-green {
+        background-color: varr.$green-clr;
+        color: varr.$white-clr-1;
+
+        &:hover {
+            background-color: fn.darken(varr.$green-clr, 10%);
+        }
+
+        &:active {
+            background-color: fn.darken(varr.$green-clr, 15%);
+        }
+    }
+
+    &-black {
+        background-color: varr.$dark-clr-3;
+        color: varr.$white-clr-1;
+
+        &:hover {
+            background-color: fn.darken(varr.$dark-clr-3, 10%);
+        }
+
+        &:active {
+            background-color: fn.darken(varr.$dark-clr-3, 15%);
+        }
+    }
+}
