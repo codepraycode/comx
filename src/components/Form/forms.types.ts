@@ -2,7 +2,7 @@
 import { ReactNode } from "react";
 
 
-type ILabel = string | ReactNode;
+export type ILabel = string | ReactNode;
 
 
 export interface RequiredInputProps {
@@ -27,6 +27,6 @@ export type SelectOption = {
     label: ILabel,
     value: string,
     image?: string,
-    desc: string,
+    desc?: string,
     id?: string;
 }

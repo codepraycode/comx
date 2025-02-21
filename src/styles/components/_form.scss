@@ -70,3 +70,66 @@
         width: 100%;
     }
 }
+
+.form-display-wrapper {
+    display: flex;
+
+    // justify-content: space-between;
+    gap: 1rem;
+
+    & > * {
+        flex: 1;
+    }
+}
+
+.form-option-wrapper {
+    display: flex;
+    gap: .5rem;
+}
+
+.form-option-item {
+    position: relative;
+    display: inline-block;
+
+    cursor: pointer;
+    padding: 1rem 1.5rem;
+
+    width: fn.px-to-rem(146px);
+    max-width: 90%;
+    text-align: center;
+
+    border-radius: 2px;
+    border: 1px solid varr.$gray-clr-3;
+
+    transition: all 0.3s ease-in-out;
+
+    span {
+        @include mxn.apply-roboto();
+
+        font-size: fn.px-to-rem(14px);
+        line-height: fn.px-to-rem(16.41px);
+        letter-spacing: 0rem;
+    }
+    
+
+    input {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        margin: -1px;
+        padding: 0;
+        border: 0;
+        overflow: hidden;
+        clip: rect(0 0 0 0);
+        white-space: nowrap;
+    }
+
+    &:has(input:checked) {
+        background-color: varr.$dark-clr-5;
+        color: varr.$white-clr-1;
+
+        span {
+            font-weight: 500;
+        }
+    }
+}

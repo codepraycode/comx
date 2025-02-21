@@ -25,3 +25,47 @@
         // min-height: fn.px-to-rem(570px);
     }
 }
+
+.auth-progress-bar {
+    width: fn.px-to-rem(500px);
+    margin-inline: auto;
+    // background-color: red;
+}
+
+.progress-dot {
+    display: inline-block;
+    width: fn.px-to-rem(12px);
+    aspect-ratio: 1;
+    border-radius: 50%;
+
+    position: absolute;
+    top: -.02rem;
+    left: .8rem;
+
+    background-color: red;
+
+    &::after {
+        content: "";
+        display: inline-block;
+        width: 2rem;
+        height: 50%;
+
+        position: absolute;
+        top: .3rem;
+        left: -2rem;
+
+        // background-color: green;
+        // height: 2px !important;
+    }
+}
+
+.ant-steps-item-tail::after,
+.progress-dot::after {
+    // background-color: red !important;
+    height: 2px !important;
+}
+
+.ant-steps-item-content {
+    height: 0rem;
+    width: 0rem !important;
+}
